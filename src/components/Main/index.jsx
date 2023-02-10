@@ -15,6 +15,7 @@ import {
   faUsers,
 } from "@fortawesome/free-solid-svg-icons";
 import Main2 from "./index2";
+import Drawer from "./index3";
 
 const extra = [
   {
@@ -69,13 +70,15 @@ export default function Main() {
                 backgroundColor: "rgba(255, 255, 255, 0.1)",
               }}
             >
-              <Fade bottom big cascade>
+              <Fade bottom cascade delay={1500}>
                 <img
                   style={{ borderRadius: "5px" }}
                   src={require("../Assets/image/img.JPG")}
                   alt=""
                   width="100%"
                 />
+              </Fade>
+              <Fade bottom cascade delay={2000}>
                 <Typography
                   variant="overline"
                   sx={{
@@ -95,10 +98,10 @@ export default function Main() {
       </Typography>
       <Main2 />
       <Box sx={{ pt: 14 }}>
-        <Fade bottom cascade>
+        <Fade bottom cascade durtion delay={2000}>
           <Typography
             sx={{
-              mb: 8,
+              mb: 3,
               fontWeight: 900,
               color: "#fff",
               fontFamily: "monospace",
@@ -109,11 +112,24 @@ export default function Main() {
             Mening loyihalarim
           </Typography>
         </Fade>
+        <Fade durtion delay={1000}>
+          <Divider
+            textAlign="center"
+            color="white"
+            sx={{
+              width: "50%",
+              margin: "0 auto",
+              mb: 3,
+              mt: 3,
+            }}
+          />
+        </Fade>
+
         <Grid
           container
           direction="row"
           justifyContent="center"
-          alignItems="center"
+          alignItems="stretch"
         >
           {extra.map((item, i) => (
             <Grid
@@ -147,6 +163,35 @@ export default function Main() {
             </Grid>
           ))}
         </Grid>
+      </Box>
+      <Box sx={{ mt: 19 }}>
+        <Fade bottom delay={2000}>
+          <Typography
+            sx={{
+              fontWeight: 900,
+              color: "#fff",
+              fontFamily: "monospace",
+              textAlign: "center",
+            }}
+            variant="h4"
+          >
+            O'quv tajribam haqida qisqacha
+          </Typography>
+        </Fade>
+        <Fade bottom delay={1000}>
+          <Divider
+            textAlign="center"
+            color="white"
+            sx={{
+              width: "50%",
+              margin: "0 auto",
+              mb: 3,
+              mt: 3,
+            }}
+          />
+        </Fade>
+
+        <Drawer />
       </Box>
     </Container>
   );

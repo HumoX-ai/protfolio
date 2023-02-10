@@ -5,7 +5,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Divider, Grid, Typography } from "@mui/material";
 import React from "react";
 import { Fade } from "react-reveal";
 
@@ -29,20 +29,40 @@ const icons = [
 export default function Main2() {
   return (
     <>
-      <Fade bottom big>
-        <Box sx={{ pt: 19, textAlign: "center" }}>
-          <Box>
+      <Box sx={{ pt: 19, textAlign: "center" }}>
+        <Box>
+          <Fade bottom delay={1000}>
             <FontAwesomeIcon icon={faLaptopCode} size="7x" color="#234e70" />
-          </Box>
+          </Fade>
+        </Box>
 
+        <Fade bottom delay={2000}>
           <Typography
-            sx={{ fontWeight: 900, color: "#fff", fontFamily: "monospace" }}
+            sx={{
+              fontWeight: 900,
+              color: "#fff",
+              fontFamily: "monospace",
+              mt: 3,
+            }}
             variant="h4"
           >
             Mening ko'nikmalarim
           </Typography>
-        </Box>
-      </Fade>
+        </Fade>
+        <Fade bottom delay={1000} duration={1000}>
+          <Divider
+            textAlign="center"
+            color="white"
+            sx={{
+              width: "50%",
+              margin: "0 auto",
+              mb: 3,
+              mt: 3,
+            }}
+          />
+        </Fade>
+      </Box>
+
       <Box sx={{ mt: 5 }}>
         <Fade bottom cascade>
           <Grid
@@ -69,7 +89,7 @@ export default function Main2() {
                   backgroundColor: "rgba(255, 255, 255, 0.1)",
                 }}
               >
-                <Fade bottom cascade>
+                <Fade bottom cascade duration={2000}>
                   {icons.icon}
                   <Typography
                     variant="subtitle1"

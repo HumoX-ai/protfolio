@@ -14,6 +14,8 @@ import Button from "@mui/material/Button";
 import { Fade } from "react-awesome-reveal";
 import "./style.css";
 import { Slide, useScrollTrigger } from "@mui/material";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram, faTelegram } from "@fortawesome/free-brands-svg-icons";
 const drawerWidth = 240;
 
 function HideOnScroll(props) {
@@ -60,7 +62,7 @@ function Navbar(props) {
         fontFamily: "monospace",
       }}
     >
-      <Typography variant="h5" sx={{ my: 2 }}>
+      <Typography variant="h5" sx={{ my: 2, fontFamily: "cursive" }}>
         HumoX
       </Typography>
       <Divider />
@@ -80,7 +82,9 @@ function Navbar(props) {
                 },
               }}
             >
-              Home
+              <Box>
+                <FontAwesomeIcon icon={faTelegram} />
+              </Box>
             </Button>
           </Box>
         </Fade>
@@ -153,6 +157,7 @@ function Navbar(props) {
               component="div"
               sx={{
                 flexGrow: 1,
+                fontFamily: "cursive",
                 display: { xs: "none", sm: "block" },
               }}
             >
@@ -174,7 +179,20 @@ function Navbar(props) {
                     },
                   }}
                 >
-                  Home
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                    }}
+                  >
+                    Telegram
+                    <FontAwesomeIcon
+                      color="#0088cc"
+                      icon={faTelegram}
+                      size="2x"
+                      style={{ paddingLeft: "5px" }}
+                    />
+                  </Box>
                 </Button>
               </Fade>
               <Fade direction="down" duration={2000}>
@@ -192,7 +210,20 @@ function Navbar(props) {
                     },
                   }}
                 >
-                  About
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                    }}
+                  >
+                    Instagram
+                    <FontAwesomeIcon
+                      color="#f52f76"
+                      icon={faInstagram}
+                      size="2x"
+                      style={{ paddingLeft: "5px" }}
+                    />
+                  </Box>
                 </Button>
               </Fade>
               <Fade direction="down" duration={3000}>
@@ -240,7 +271,6 @@ function Navbar(props) {
       </Box>
       <Box component="main" sx={{ p: 3 }}>
         <Toolbar />
-        <Typography></Typography>
       </Box>
     </Box>
   );
