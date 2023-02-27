@@ -2,7 +2,7 @@ import { Container, Divider, Grid, Typography } from "@mui/material";
 
 import React from "react";
 import Type from "./Typed";
-import "./style.css";
+
 import "animate.css";
 import { Box } from "@mui/system";
 import Fade from "react-reveal/Fade";

@@ -15,7 +15,11 @@ import { Fade } from "react-awesome-reveal";
 import "./style.css";
 import { Slide, useScrollTrigger } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInstagram, faTelegram } from "@fortawesome/free-brands-svg-icons";
+import {
+  faInstagram,
+  faTelegram,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 const drawerWidth = 240;
 
 function HideOnScroll(props) {
@@ -36,10 +40,7 @@ function HideOnScroll(props) {
 
 HideOnScroll.propTypes = {
   children: PropTypes.element.isRequired,
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
+ 
   window: PropTypes.func,
 };
 
@@ -83,7 +84,9 @@ function Navbar(props) {
               }}
             >
               <Box>
-                <FontAwesomeIcon icon={faTelegram} />
+                <a href="http://t.me/HumoX" target="_blank" rel="noreferrer">
+                  <FontAwesomeIcon icon={faTelegram} size="2x" />
+                </a>
               </Box>
             </Button>
           </Box>
@@ -103,7 +106,13 @@ function Navbar(props) {
                 },
               }}
             >
-              About
+              <a
+                href="https://www.instagram.com/humoyun_1912/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FontAwesomeIcon icon={faInstagram} size="2x" />
+              </a>
             </Button>
           </Box>
         </Fade>
@@ -122,7 +131,13 @@ function Navbar(props) {
                 },
               }}
             >
-              Contact
+              <a
+                href="https://twitter.com/mr_humoyun"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FontAwesomeIcon icon={faTwitter} size="2x" />
+              </a>
             </Button>
           </Box>
         </Fade>
@@ -150,7 +165,9 @@ function Navbar(props) {
               onClick={handleDrawerToggle}
               sx={{ display: { sm: "none" } }}
             >
-              <Hamburger />
+              <Hamburger
+               
+              />
             </IconButton>
             <Typography
               variant="h5"
@@ -185,13 +202,18 @@ function Navbar(props) {
                       alignItems: "center",
                     }}
                   >
-                    Telegram
-                    <FontAwesomeIcon
-                      color="#0088cc"
-                      icon={faTelegram}
-                      size="2x"
-                      style={{ paddingLeft: "5px" }}
-                    />
+                    <a
+                      href="http://t.me/HumoX"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <FontAwesomeIcon
+                        color="#0088cc"
+                        icon={faTelegram}
+                        size="2x"
+                        style={{ paddingLeft: "5px" }}
+                      />
+                    </a>
                   </Box>
                 </Button>
               </Fade>
@@ -216,13 +238,18 @@ function Navbar(props) {
                       alignItems: "center",
                     }}
                   >
-                    Instagram
-                    <FontAwesomeIcon
-                      color="#f52f76"
-                      icon={faInstagram}
-                      size="2x"
-                      style={{ paddingLeft: "5px" }}
-                    />
+                    <a
+                      href="https://www.instagram.com/humoyun_1912/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <FontAwesomeIcon
+                        color="#f52f76"
+                        icon={faInstagram}
+                        size="2x"
+                        style={{ paddingLeft: "5px" }}
+                      />
+                    </a>
                   </Box>
                 </Button>
               </Fade>
@@ -241,7 +268,18 @@ function Navbar(props) {
                     },
                   }}
                 >
-                  Contact
+                  <a
+                    href="https://twitter.com/mr_humoyun"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <FontAwesomeIcon
+                      color="#00acee"
+                      icon={faTwitter}
+                      size="2x"
+                      style={{ paddingLeft: "5px" }}
+                    />
+                  </a>
                 </Button>
               </Fade>
             </Box>

@@ -21,6 +21,7 @@
     "react-animated-css": "^1.2.1",
     "react-awesome-reveal": "^4.2.3",
     "react-dom": "^18.2.0",
+    "react-loader-spinner": "^5.3.4",
     "react-loading": "^2.0.3",
     "react-loading-icons": "^1.1.0",
     "react-reveal": "^1.2.2",

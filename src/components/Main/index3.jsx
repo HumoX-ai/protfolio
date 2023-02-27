@@ -124,53 +124,7 @@ export default function Drawer() {
           </AccordionDetails>
         </Accordion>
       </Fade>
-      <Fade bottom delay={2100}>
-        <Accordion
-          sx={{
-            borderRadius: 3,
-            p: 1,
-            m: 1,
-
-            backdropBlur: "blur(10px)",
-            backgroundColor: "rgba(255, 255, 255, 0.1)",
-          }}
-          expanded={expanded === "panel3"}
-          onChange={handleChange("panel3")}
-        >
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel3bh-content"
-            id="panel3bh-header"
-          >
-            <Typography
-              sx={{
-                flexShrink: 0,
-                fontFamily: "Roboto Mono",
-                color: "white",
-                fontWeight: 700,
-                width: { xs: "38%", sm: "33%" },
-              }}
-            >
-              Advanced settings
-            </Typography>
-            <Typography
-              sx={{
-                color: "text.secondary",
-                fontFamily: "Roboto Mono",
-                fontSize: { xs: "11px", md: "16px", sm: "16px" },
-              }}
-            >
-              Filtering has been entirely disabled for whole web server
-            </Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography sx={{ fontFamily: "Roboto Mono" }}>
-              Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer
-              sit amet egestas eros, vitae egestas augue. Duis vel est augue.
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
-      </Fade>
+      <Fade bottom delay={2100}></Fade>
       <Fade bottom delay={2150}>
         <Accordion
           sx={{
@@ -207,7 +161,7 @@ export default function Drawer() {
                 fontSize: { xs: "11px", md: "16px", sm: "16px" },
               }}
             >
-              Eng axmoq paytim va <b>Coding</b> paytim
+              Eng axmoq  va <b>Coding</b> paytim
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
