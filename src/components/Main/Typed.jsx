@@ -4,7 +4,7 @@ import React from "react";
 import Typed from "react-typed";
 
 const textLines = [
-  `Hammaga salom mening ismim <b>Humoyun</b>`,
+  `Salom mening ismim <b>Humoyun</b>`,
   `Yoshim <b>17</b>da.`,
   `Bu Test <b>Portfolio</b>😉`,
   `Xush kelibsiz🤠`,

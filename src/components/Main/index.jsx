@@ -92,6 +92,7 @@ export default function Main() {
                   Dasturchilik bilan 2020-yildan buyon tanishman
                 </Typography>
               </Fade>
+             
             </Box>
           </Grid>
         </Grid>

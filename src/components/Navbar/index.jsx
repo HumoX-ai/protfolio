@@ -11,7 +11,7 @@ import Hamburger from "hamburger-react";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import { Fade } from "react-awesome-reveal";
+import { Fade } from "react-reveal";
 import "./style.css";
 import { Slide, useScrollTrigger } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -40,7 +40,7 @@ function HideOnScroll(props) {
 
 HideOnScroll.propTypes = {
   children: PropTypes.element.isRequired,
- 
+
   window: PropTypes.func,
 };
 
@@ -91,31 +91,31 @@ function Navbar(props) {
             </Button>
           </Box>
         </Fade>
-        <Fade direction="up" duration={2000} fraction={0.2}>
-          <Box sx={{ mt: 1, mb: 1 }}>
-            <Button
-              fullWidth
-              sx={{
+
+        <Box sx={{ mt: 1, mb: 1 }}>
+          <Button
+            fullWidth
+            sx={{
+              color: "white",
+              fontSize: "18px",
+              fontFamily: "monospace",
+              ":hover": {
+                bgcolor: "#4682B4",
                 color: "white",
-                fontSize: "18px",
-                fontFamily: "monospace",
-                ":hover": {
-                  bgcolor: "#4682B4",
-                  color: "white",
-                  opacity: "1",
-                },
-              }}
+                opacity: "1",
+              },
+            }}
+          >
+            <a
+              href="https://www.instagram.com/humoyun_1912/"
+              target="_blank"
+              rel="noreferrer"
             >
-              <a
-                href="https://www.instagram.com/humoyun_1912/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FontAwesomeIcon icon={faInstagram} size="2x" />
-              </a>
-            </Button>
-          </Box>
-        </Fade>
+              <FontAwesomeIcon icon={faInstagram} size="2x" />
+            </a>
+          </Button>
+        </Box>
+
         <Fade direction="up" duration={3000} fraction={0.2}>
           <Box>
             <Button
@@ -165,9 +165,7 @@ function Navbar(props) {
               onClick={handleDrawerToggle}
               sx={{ display: { sm: "none" } }}
             >
-              <Hamburger
-               
-              />
+              <Hamburger />
             </IconButton>
             <Typography
               variant="h5"
@@ -207,11 +205,10 @@ function Navbar(props) {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <FontAwesomeIcon
-                        color="#0088cc"
-                        icon={faTelegram}
-                        size="2x"
-                        style={{ paddingLeft: "5px" }}
+                      <img
+                        width="40px"
+                        src={require("../Assets/logos/telegram.png")}
+                        alt=""
                       />
                     </a>
                   </Box>
@@ -243,11 +240,10 @@ function Navbar(props) {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <FontAwesomeIcon
-                        color="#f52f76"
-                        icon={faInstagram}
-                        size="2x"
-                        style={{ paddingLeft: "5px" }}
+                      <img
+                        width="40px"
+                        src={require("../Assets/logos/instagram.png")}
+                        alt=""
                       />
                     </a>
                   </Box>
@@ -273,11 +269,10 @@ function Navbar(props) {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <FontAwesomeIcon
-                      color="#00acee"
-                      icon={faTwitter}
-                      size="2x"
-                      style={{ paddingLeft: "5px" }}
+                    <img
+                      width="40px"
+                      src={require("../Assets/logos/twitter.png")}
+                      alt=""
                     />
                   </a>
                 </Button>
